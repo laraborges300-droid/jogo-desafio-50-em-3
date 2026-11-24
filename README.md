@@ -2,7 +2,7 @@
 
 Um jogo de conhecimentos geográficos no qual o jogador precisa citar 50 países em apenas 3 minutos!
 
-🔗 **[Jogue agora!](https://laraborges300-droid.github.io/jogo-desafio/)**
+**[Jogue agora!](https://laraborges300-droid.github.io/jogo-desafio-50-em-3/)**
 
 ## Sobre o projeto
 
