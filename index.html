@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>50 Países em 3 Minutos</title>
+
+    <link rel="stylesheet" href="/src/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>50 Países em 3 Minutos</h1>
+      <p>Teste seus conhecimentos sobre os países do mundo!</p>
+    </header>
+
+    <main>
+      <!-- JOGO -->
+      <section id="game">
+        <div class="game-info">
+          <div>
+            <h2>Países encontrados</h2>
+            <p id="score">0 / 50</p>
+          </div>
+
+          <div>
+            <h2>Tempo restante</h2>
+            <p id="timer">03:00</p>
+          </div>
+        </div>
+
+        <div class="answer-area">
+          <input
+            type="text"
+            id="countryInput"
+            placeholder="Digite um país..."
+            autocomplete="off"
+            autofocus
+          />
+        </div>
+
+        <div id="feedback"></div>
+
+        <div class="game-buttons">
+          <button id="giveUpButton" type="button" hidden>Desistir</button>
+
+          <button id="restartButton" type="button" hidden>
+            Jogar novamente
+          </button>
+        </div>
+
+        <div id="countriesList">
+          <h2>Países encontrados</h2>
+          <ul id="foundCountries"></ul>
+        </div>
+      </section>
+
+      <!-- RANKING -->
+      <section id="ranking">
+        <div class="ranking-header">
+          <h2>Ranking dos jogadores</h2>
+          <p>Os 50 melhores resultados do desafio</p>
+        </div>
+
+        <div class="ranking-section">
+          <div class="ranking-table-container">
+            <table id="generalRanking">
+              <thead>
+                <tr>
+                  <th>Posição</th>
+                  <th>Jogador</th>
+                  <th>Países</th>
+                  <th>Tempo</th>
+                </tr>
+              </thead>
+
+              <tbody id="generalRankingBody">
+                <tr>
+                  <td colspan="4">Seja o primeiro a participar!</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

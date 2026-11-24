@@ -1,0 +1,398 @@
+
+/* ==========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 30px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #DDF3F4, #E8F7EF);
+    color: #24445C;
+}
+
+/* ==========================================
+   2. CABEÇALHO
+========================================== */
+
+header {
+    text-align: center;
+    margin: 25px auto 40px;
+}
+
+header h1 {
+    color: #087E8B;
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+header p {
+    color: #426B70;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   3. ÁREA PRINCIPAL
+========================================== */
+
+main {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+#game {
+    width: 100%;
+    background: #FFFFFF;
+    padding: 35px;
+    border-radius: 20px;
+    border: 2px solid #B8E3D0;
+    box-shadow: 0 12px 35px rgba(29, 100, 91, 0.13);
+}
+
+/* ==========================================
+   4. PONTUAÇÃO E CRONÔMETRO
+========================================== */
+
+.game-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.game-info > div {
+    background: #E8F7EF;
+    border: 1px solid #C5E9D5;
+    padding: 22px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.game-info h2 {
+    color: #47766A;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+#score,
+#timer {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#score {
+    color: #15966B;
+}
+
+#timer {
+    color: #087E8B;
+}
+
+/* ==========================================
+   5. CAMPO DE RESPOSTA
+========================================== */
+
+.answer-area {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+#countryInput {
+    width: 100%;
+    padding: 17px 20px;
+    border: 2px solid #9BD6C1;
+    border-radius: 12px;
+    background: #F4FBF8;
+    color: #24445C;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#countryInput::placeholder {
+    color: #779B91;
+}
+
+#countryInput:focus {
+    border-color: #087E8B;
+    box-shadow: 0 0 0 4px rgba(8, 126, 139, 0.13);
+}
+
+#countryInput:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   6. FEEDBACK
+========================================== */
+
+#feedback {
+    width: 100%;
+    min-height: 28px;
+    margin: 22px 0;
+    text-align: center;
+    color: #087E8B;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+#feedback.victory {
+    color: #15966B;
+}
+
+/* ==========================================
+   7. BOTÕES
+========================================== */
+
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    margin: 20px auto 30px;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 22px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.game-buttons button {
+    flex: 0 0 auto;
+    min-width: 140px;
+}
+
+#giveUpButton {
+    background: #087E8B;
+    color: #FFFFFF;
+}
+
+#giveUpButton:hover {
+    background: #066873;
+}
+
+#restartButton {
+    background: #15966B;
+    color: #FFFFFF;
+}
+
+#restartButton:hover {
+    background: #087E56;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ==========================================
+   8. PAÍSES ENCONTRADOS
+========================================== */
+
+#countriesList {
+    width: 100%;
+    text-align: center;
+    border-top: 2px dashed #B8DCCC;
+    padding-top: 25px;
+}
+
+#countriesList h2 {
+    color: #087E8B;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#foundCountries {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+}
+
+#foundCountries li {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #C5E9D5;
+    background: #E8F7EF;
+    color: #26745B;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   9. RANKING
+========================================== */
+
+#ranking {
+    width: 100%;
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 35px;
+    background: #FFFFFF;
+    border: 2px solid #B8E3D0;
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(29, 100, 91, 0.13);
+}
+
+.ranking-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ranking-header h2 {
+    color: #087E8B;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.ranking-header p {
+    color: #47766A;
+    font-size: 0.95rem;
+}
+
+.ranking-section {
+    margin-top: 25px;
+}
+
+.ranking-section h3 {
+    color: #087E8B;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.ranking-table-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #C5E9D5;
+    border-radius: 12px;
+}
+
+.ranking-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.ranking-table-container thead {
+    background: #087E8B;
+    color: #FFFFFF;
+}
+
+.ranking-table-container th {
+    padding: 15px 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.ranking-table-container td {
+    padding: 14px 12px;
+    color: #24445C;
+    border-bottom: 1px solid #E0F0E8;
+    font-size: 0.9rem;
+}
+
+.ranking-table-container tbody tr:nth-child(even) {
+    background: #F1FAF5;
+}
+
+.ranking-table-container tbody tr:hover {
+    background: #DDF3F4;
+}
+
+.ranking-table-container tbody td[colspan] {
+    color: #779B91;
+    padding: 22px;
+}
+
+/* ==========================================
+   10. RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px 12px;
+    }
+
+    header {
+        margin: 20px auto 25px;
+    }
+
+    #game,
+    #ranking {
+        padding: 20px;
+    }
+
+    .game-info {
+        gap: 10px;
+    }
+
+    .game-info > div {
+        padding: 15px 10px;
+    }
+
+    .game-info h2 {
+        font-size: 0.8rem;
+    }
+
+    #score,
+    #timer {
+        font-size: 1.6rem;
+    }
+
+    #foundCountries {
+        grid-template-columns: 1fr;
+    }
+
+    .game-buttons button {
+        min-width: 120px;
+    }
+
+    .ranking-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .ranking-table-container th,
+    .ranking-table-container td {
+        padding: 11px 8px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+    
+}
+

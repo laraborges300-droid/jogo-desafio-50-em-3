@@ -1,0 +1,21 @@
+{
+  "name": "jogo-desafio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/js/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "vite": "^8.3.8"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.2"
+  }
+}
