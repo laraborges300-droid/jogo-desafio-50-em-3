@@ -1,6 +1,5 @@
-
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/jogo-desafio/",
+  base: "/jogo-desafio-50-em-3/",
 });

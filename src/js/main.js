@@ -16,7 +16,7 @@ const giveUpButton = document.getElementById("giveUpButton");
 // CONFIGURAÇÕES DO JOGO
 const TOTAL_COUNTRIES = 50;
 const GAME_DURATION = 180;
-const VALIDATION_DELAY = 800;
+const VALIDATION_DELAY = 380;
 
 // ESTADO DA PARTIDA
 let gameStarted = false;
